@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+
+		<Description>Send emails with FluentEmail via MailerSend using their REST API.</Description>
+		<AssemblyTitle>Fluent Email - MailerSend</AssemblyTitle>
+		<Authors>Marco Ribeiro</Authors>
+		<Company />
+		<PackageId>jcamp.FluentEmail.MailerSend</PackageId>
+		<PackageVersion>1.1.0</PackageVersion>
+		<PackageTags>mailersend;email;razor;liquid;fluent;fluentemail</PackageTags>
+		<PackageLicenseExpression>MIT OR Apache-2.0</PackageLicenseExpression>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="jcamp.FluentEmail.Core" Version="3.7.0" />
+	  <PackageReference Include="System.Net.Http.Json" Version="6.0.1" />
+	  <PackageReference Include="System.Text.Json" Version="6.0.9" />
+	</ItemGroup>
+
+</Project>
