@@ -10,7 +10,7 @@
 		<Authors>Marco Ribeiro</Authors>
 		<Company />
 		<PackageId>jcamp.FluentEmail.MailerSend</PackageId>
-		<PackageVersion>1.1.0</PackageVersion>
+		<PackageVersion>1.1.1</PackageVersion>
 		<PackageTags>mailersend;email;razor;liquid;fluent;fluentemail</PackageTags>
 		<PackageLicenseExpression>MIT OR Apache-2.0</PackageLicenseExpression>
 	</PropertyGroup>

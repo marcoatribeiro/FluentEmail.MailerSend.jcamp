@@ -4,6 +4,7 @@ using FluentEmail.Core.Models;
 using FluentEmail.MailerSend.Utils;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
+using System.Text.Encodings.Web;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -43,6 +44,7 @@ public class MailerSendSender : ISender
     private static JsonSerializerOptions JsonSerializerOptions => new()
     {
         PropertyNamingPolicy = new SnakeCaseNamingPolicy(),
-        DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+        DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
+        Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping
     };
 }
