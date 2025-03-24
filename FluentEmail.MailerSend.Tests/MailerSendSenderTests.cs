@@ -8,7 +8,7 @@ public class MailerSendSenderTests
     [Fact]
     public async Task SendEmailTest()
     {
-        const string apiToken = "mlsn.8433f98d5f5dbe7b8330d04899cf204ea9adf538947b60801108564197e40b2b";
+        const string apiToken = "MAILSENDER_API_TOKEN";
 
         Email.DefaultSender = new MailerSendSender(apiToken);
 
