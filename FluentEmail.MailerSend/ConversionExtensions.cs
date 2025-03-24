@@ -1,4 +1,5 @@
 ﻿using FluentEmail.Core.Models;
+using FluentEmail.MailerSend.Utils;
 
 namespace FluentEmail.MailerSend;
 
@@ -11,7 +12,7 @@ internal static class ConversionExtensions
         => @this.Select(x => x.ToRecipient());
 
     public static IEnumerable<Attachment> ToAttachments(this IList<Core.Models.Attachment> @this) 
-        => @this.Select(x => new Attachment { Content = x.ContentType, Filename = x.Filename, Id = x.ContentId });
+        => @this.Select(x => new Attachment { Content = x.Data.ToBase64String(), Filename = x.Filename, Id = x.ContentId });
 
     public static long? ToUnixTime(this DateTime? @this) 
         => @this == null ? null : new DateTimeOffset(@this.Value.ToUniversalTime()).ToUnixTimeSeconds();
